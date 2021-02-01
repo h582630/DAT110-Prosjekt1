@@ -6,10 +6,15 @@ import no.hvl.dat110.TODO;
 
 public class Message {
 
+	private final int MESSAGE_SIZE = 128; 
+	
 	private byte[] payload;
 
 	public Message(byte[] payload) {
-		this.payload = payload; // TODO: check for length within boundary
+		if(payload.length < MESSAGE_SIZE) {
+		this.payload = payload;
+		
+		}
 	}
 
 	public Message() {
