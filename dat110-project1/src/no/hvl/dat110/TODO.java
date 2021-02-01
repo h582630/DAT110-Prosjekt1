@@ -2,6 +2,10 @@ package no.hvl.dat110;
 
 public class TODO {
 
+	
+	/*
+	 * Test comment
+	 */
 	public static String method() {
 		
 		String methodName = Thread.currentThread().getStackTrace()[2].getMethodName();
