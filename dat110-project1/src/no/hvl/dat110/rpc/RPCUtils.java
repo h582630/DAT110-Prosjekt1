@@ -88,11 +88,11 @@ public class RPCUtils {
 		rpcid = encoded[0]; 
 		
 		
-		byte [] intToBytesArray = ByteBuffer.allocateDirect(4).putInt(x).array();
+		byte[] intToBytes = ByteBuffer.allocate(4).putInt(x).array();
 		
 		
-		for(int i = 0; i < intToBytesArray.length; i++) {
-			encoded[i+1] = intToBytesArray[i]; 
+		for(int i = 1; i < encoded.length; i++) {
+			encoded[i] = intToBytes[i-1]; 
 		}
 		
 		return encoded; 
@@ -104,7 +104,7 @@ public class RPCUtils {
 
 	public static int unmarshallInteger(byte[] data) {
 
-		int decoded = ByteBuffer.wrap(data).getInt(1);;
+		int decoded = ByteBuffer.wrap(data).getInt(1);
 
 
 		return decoded;
