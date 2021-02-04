@@ -57,7 +57,7 @@ public class Connection {
 			e.printStackTrace();
 		} 
 		
-		
+		//test
 		message.decapsulate(recvbuf);
 
 		
