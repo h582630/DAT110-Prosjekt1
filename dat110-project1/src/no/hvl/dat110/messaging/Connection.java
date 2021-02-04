@@ -32,6 +32,7 @@ public class Connection {
 
 	public void send(Message message) {
 
+
 		byte []	meldig = message.encapsulate();
 		
 		try {
@@ -44,6 +45,7 @@ public class Connection {
 	}
 
 	public Message receive() {
+
 
 		Message message = new Message();
 		byte[] recvbuf = null;
