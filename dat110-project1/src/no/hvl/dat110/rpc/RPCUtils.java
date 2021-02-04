@@ -103,11 +103,19 @@ public class RPCUtils {
 	}
 
 	public static int unmarshallInteger(byte[] data) {
+		
+		byte [] integerArray = new byte [data.length - 1]; 
 
-		int decoded = ByteBuffer.wrap(data).getInt(1);
+		
+		for(int i = 1; i < data.length; i++) {
+			integerArray[i-1] = data[i];
+			
+		}
+		
+	
+		return ByteBuffer.wrap(integerArray).getInt();
+		
 
-
-		return decoded;
 
 	}
 }
