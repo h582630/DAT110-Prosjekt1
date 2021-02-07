@@ -49,7 +49,7 @@ public class Controller  {
 		
 		int i = 0; 
 		
-		while(i < 30) {
+		while(i < 20) {
 			int temperature = sensor.read(); 
 			
 			String temp = Integer.toString(temperature); 

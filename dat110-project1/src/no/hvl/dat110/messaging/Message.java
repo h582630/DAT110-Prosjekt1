@@ -43,6 +43,7 @@ public class Message {
 
 	public void decapsulate(byte[] received) {
 
+	
 		int length = received[0]; 
 		
 		payload = new byte[length]; 
