@@ -85,7 +85,7 @@ public class RPCUtils {
 
 		byte[] encoded = new byte[5];
 		
-		rpcid = encoded[0]; 
+		 encoded[0] = rpcid; 
 		
 		
 		byte[] intToBytes = ByteBuffer.allocate(4).putInt(x).array();

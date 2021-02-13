@@ -46,7 +46,7 @@ public class RPCServer {
 		   
 		   Message message = connection.receive(); 
 		
-		   int rpcid = message.getData()[0]; 
+		   int rpcid = Byte.valueOf(message.getData()[0]).intValue(); 
 		   
 		   RPCImpl rpcimpl = services.get(rpcid);
 		   

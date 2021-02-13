@@ -29,8 +29,7 @@ public class Controller  {
 		// register display and sensor objects in the RPC layer
 		
 		
-		displayclient.connect();
-		sensorclient.connect();
+		
 		
 		display = new Display(); 
 		sensor = new Sensor(); 
@@ -49,12 +48,9 @@ public class Controller  {
 		
 		int i = 0; 
 		
-		while(i < 20) {
-			int temperature = sensor.read(); 
+		while(i < N) {			
 			
-			String temp = Integer.toString(temperature); 
-			
-			display.write(temp);
+			display.write(Integer.toString(sensor.read()));
 		
 			i++; 
 		}

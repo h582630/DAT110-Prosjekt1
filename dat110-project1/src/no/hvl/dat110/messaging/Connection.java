@@ -50,13 +50,14 @@ public class Connection {
 
 		
 		try {
-			recvbuf = inStream.readNBytes(128);
+			recvbuf = inStream.readNBytes(MessageConfig.SEGMENTSIZE);
+			message.decapsulate(recvbuf);
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
 		
-		//test
-		message.decapsulate(recvbuf);
+		
+	
 
 		
 		return message; 
